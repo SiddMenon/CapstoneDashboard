@@ -1,0 +1,81 @@
+  <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.13.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../../assets/css/typography.css">
+  <link rel="stylesheet" href="../../assets/css/default-css.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+  <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.13.min.js"></script>
+  <script src="../../assets/js/modernizr-2.8.3.min.js"></script>
+  <script src="../../assets/js/jquery-3.3.1.min.js"></script>
+  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+  <link rel="stylesheet" href="../../assets/css/typography.css">
+  <link rel="stylesheet" href="../../assets/css/default-css.css">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="../../assets/animate/animate.css"> 
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="../../assets/select2/select2.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="../../assets/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/util.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/main.css">
+<!--===============================================================================================-->
+<div class="row">
+	<div class = "col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading"><h1><b>Author Cluster</b></h1></div>
+			<div class="bk-root" style="text-align: center;">
+				<div class="bk-plotdiv" id="fe631be8-6db5-4776-b7d4-6e34566e36d3" style="display: inline-block"></div>
+			</div>
+			<div id="sampleID" style="align:center">
+				<a class="button" href="https://output-graph.herokuapp.com/index.html">Button</a>
+			</div>
+			<br>
+		</div>
+	</div>
+</div>
+<br>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h1><b>Keyword Table</b></h1></div>
+      <div class="panel-body">
+        <div class="container-table100">
+			<div class="wrap-table100">
+				<div id="tableKey" class="table100">
+					<font size="50">
+					<table>
+						<thead>
+							<tr class='table100-head'>
+								<th class='column1' style="font-size:20px">Topic</th>
+								<th class='column2' style="font-size:20px">Author Names</th>
+								<th class='column3' style="font-size:20px">Resources</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr *ngFor="let item of data.data">
+								<td class='column1' style="font-size:20px">{{item.topic}}</td>
+								<td class='column2' style='width: 400px;font-size:20px' onclick="alert('Showing Authors')">{{item.tempAuthors}}</td>
+								<td class='column3' style='width: 400px;font-size:20px'>
+									<table>
+										<tbody>
+											<tr *ngFor="let resource of item.resources" onclick="alert(resource.url)">
+												<td class='column1' style="font-size:20px">{{resource.title}}</td>
+												<td class='column2' style='width: 400px;font-size:20px'>{{resource.url}}</td>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					</font>
+				</div>
+			</div>
+		</div>
+      </div>
+    </div>
+  </div>
+
+</div><!--/.row-->
+<br>
