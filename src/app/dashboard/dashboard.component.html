@@ -29,7 +29,7 @@
 				<div class="bk-plotdiv" id="fe631be8-6db5-4776-b7d4-6e34566e36d3" style="display: inline-block"></div>
 			</div>
 			<div id="sampleID" style="align:center">
-				<a class="button" href="https://output-graph.herokuapp.com/index.html">Button</a>
+				<a class="button" href="https://output-graph.herokuapp.com/index.html" target="_blank">Click here for the graph</a>
 			</div>
 			<br>
 		</div>
@@ -56,13 +56,15 @@
 						<tbody>
 							<tr *ngFor="let item of data.data">
 								<td class='column1' style="font-size:20px">{{item.topic}}</td>
-								<td class='column2' style='width: 400px;font-size:20px' onclick="alert('Showing Authors')">{{item.tempAuthors}}</td>
+								<td class='column2' style='width: 400px;font-size:20px'>{{item.tempAuthors}}</td>
 								<td class='column3' style='width: 400px;font-size:20px'>
 									<table>
 										<tbody>
 											<tr *ngFor="let resource of item.resources" onclick="alert(resource.url)">
+											<a href={{resource.url}} target="_blank">
 												<td class='column1' style="font-size:20px">{{resource.title}}</td>
 												<td class='column2' style='width: 400px;font-size:20px'>{{resource.url}}</td>
+											</a>
 										</tbody>
 									</table>
 								</td>
